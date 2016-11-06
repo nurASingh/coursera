@@ -1,0 +1,158 @@
+.row-header {
+  margin: 0px auto;
+  padding: 0px 0px;
+}
+
+.row-footer {
+  margin: 0px auto;
+  padding: 20px 0px;
+  background-color: #AfAfAf;
+}
+
+.jumbotron {
+    margin: 0px auto;
+    background: white;
+    color: #5D5C5B;
+    font-size: 5rem;
+         padding-top: 0px; 
+     padding-bottom: 0px; 
+}
+
+body {
+  align: center;
+  padding: 10px 0px 0px 0px;
+  z-index: 0;
+}
+
+ul{
+    padding: 0;
+    list-style-type: none;
+}
+.media-list .media-body .qty{
+  width:30%;
+  display: inline;
+  margin-left: 5%;
+  text-align: center;
+}
+
+.media-list .media-body .gray{
+  color :#777;
+  opacity: 0.8;
+}
+
+img{
+  border: 0px !important;
+  padding: 0px !important;
+}
+
+hr {
+    border: none;
+    height: 7px;
+    color: #d5d5d5; 
+    background-color: #d5d5d5;
+}
+
+h1,h2,h3,h4,h5,h6{
+  display: inline;
+}
+
+h5{
+  margin-left: 10%;
+}
+
+#update{
+  margin-top: 5%;
+}
+
+#update div ,a {
+display: inline;
+}
+
+#update div{
+      height: 5%;
+    border-left: gray solid 2px;
+}
+
+#update a{
+  margin: 3%;
+  color:#777;
+}
+
+ul li hr{
+  margin-top: 50px;
+      border: none;
+    height: 1px;
+    color: #d5d5d5; 
+    background-color: #d5d5d5;
+}
+
+.col-xs-8 p{
+  text-align: center;
+}
+
+.col-xs-9 h5{
+  margin: 0px;
+}
+
+.shipping-free p{
+      color: gray;
+    opacity: 0.8;
+}
+
+* {
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+}
+
+#couponcode{
+  width: 55%;
+}
+
+#cartFooter .btn-footer{
+      width: 30%;
+    margin-left: 3%;
+      background-image: linear-gradient(to bottom,#fff 0,#fff 100%);
+}
+
+#cartFooter .footer-row{
+  margin-top: 10%;
+}
+
+#cartFooter .btn-checkout{
+      width: 70%;
+    background-image: linear-gradient(to bottom,#337ab7 0,#337ab7 100%);
+    margin-left: 15%;
+}
+
+#cartFooter .btn-continue-shopping{
+  margin: 5%;
+}
+
+#cartFooter .btn-continue-shopping h5{
+  color:black;
+}
+
+#cartFooter .shipping-free img{
+  margin-left: 40%;
+}
+
+#cartFooter .sign-in p{
+  margin: 10%;
+}
+
+#cartFooter hr{
+  height: 1px;
+      width: 130%;
+}
+
+#cartFooter .shipping-free hr{
+  height: 1px;
+      width: 100%;
+}
+
+.item-edit{
+  margin-left: 20%;
+  margin-top: 15%;
+    width: 50%;
+}

@@ -1,0 +1,33 @@
+<div class="container" ng-init="loadInitialData()">
+    <ul class="media-list">
+	    <li class="media" ng-repeat = "item in items">
+	        <div class="media-left media-top">
+                <a href="#">
+                <img class="media-object img-thumbnail"
+                 src={{'images/T'+($index+1)+'.jpg'}} alt="Uthappizza">
+                </a>
+	        </div>
+	        <div class="media-body">
+				<div class="col-xs-12 col-sm-2"><strong>{{item.p_variation | uppercase}}</strong>
+				</div>
+					<div class="col-xs-12 col-sm-2"><strong>{{item.p_name | uppercase}}</strong></div>
+					<div class="col-xs-12 col-sm-1 small gray"><label>Style: </label><span> {{item.p_style | uppercase}}</span></div>
+					<div class="col-xs-12 col-sm-1 small gray"><label>Color: </label><span>{{item.p_selected_color.name | capitalize}}</span></div>
+					<div class="col-xs-12 col-sm-1 small gray"><label>Size: </label><span>{{item.p_selected_size.code | uppercase}}</span></div>
+				<div class="col-xs-12 col-sm-2"><label>QTY:</label> <input class=" qty" id="inputdefault" type="number" value="{{item.p_quantity}}" /></div>
+				<div class="col-xs-12 col-sm-2 h3"><strong>{{ item.p_price  | currency: item.c_currency:0  }}</strong></div>
+	        </div>
+	        <div id="update" class="col-xs-12">
+	        	<a href="#" class="edit-item" data-id= "{{item.p_id}}" data-toggle="modal" data-target="#itemDetailModal" ng-click="openForEdit($event)">EDIT</a> <div></div>
+	        	<a data-toggle="modal" data-target="#todoModal"><strong>X</strong> REMOVE</a><div></div>
+	        	<a data-toggle="modal" data-target="#todoModal">SAVE FOR LATTER</a>
+	        </div>
+	        <hr ng-show="{{$index < items.length-1}}">
+	    </li>
+    </ul>
+<hr>
+</div>
+
+
+
+

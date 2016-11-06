@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<title>JS Assignment</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="This is assignment task for JS HTML CSS">
+<meta name="author" content="Arun Kumar Singh">
+<script>
+var color = ['red' , 'green' ,'blue' ,'yellow' , 'white' ,'cyan','purple' , 'aqua'];
+var count = 0;
+
+function do_game(){
+	var index = Math.floor(Math.random() * color.length); 
+	var msg = 'I am thing of one of these color : \n\n' + color.sort() + '\n\n What color I am thinking of';
+	var rightColor = color[index]; 
+	console.log(rightColor);
+	var guesColor = prompt(msg);
+	count++;
+	var isCorrect = false;
+	while(isCorrect === false){
+	
+		isCorrect = check_guess(rightColor,guesColor);
+		if(isCorrect){
+			document.body.style.backgroundColor  = guesColor;
+			break;
+		}else{
+			count++;
+			guesColor = prompt(msg);
+		}
+
+	}	
+}
+
+function check_guess(rightColor , guesColor){
+	var msg = '';
+	var ret = false;
+	if(color.indexOf(guesColor) != -1){
+		if(rightColor === guesColor){
+			msg = 'Congratulation you have guessed the color! \n \n It took you ' + count + ' guesses to finish the game ! \n\n You can see the color in background';
+			ret = true;
+		}else if(rightColor < guesColor){
+			msg = 'Sorry , Your guess is not correct! \n \n Hint: Your color is alphabetically higher than mine ! \n\n Please try again !';
+		}else if(rightColor > guesColor){
+			msg = 'Sorry , Your guess is not correct! \n \n Hint: Your color is alphabetically lower than mine ! \n\n Please try again !';
+
+		}
+	}else{
+			msg = 'Sorry , I do not recognize your color. \n\n Please try again !';
+	}
+	
+	alert(msg);
+	return ret;
+}
+
+</script>
+</head>
+
+<body onload="do_game()">
+</body>
+
+</html>
